@@ -15,6 +15,7 @@ class UserInput extends Component {
   }
 
   handleOnSubmit = (event) => {
+    
     event.preventDefault();
     this.props.dispatch({type: 'ADD_USER', user: this.state})
   }
@@ -23,20 +24,10 @@ class UserInput extends Component {
     return(
       <form onSubmit={this.handleOnSubmit}>
         <p>
-          <input
-            type="text"
-            id="username"
-            onChange={this.handleInputChange}
-            placeholder="username"
-          />
+          <input type="text" id="username" onChange={this.handleInputChange} placeholder="username"/>
         </p>
         <p>
-          <input
-            type="text"
-            id="hometown"
-            onChange={this.handleInputChange}
-            placeholder="hometown"
-          />
+          <input type="text" id="hometown" onChange={this.handleInputChange} placeholder="hometown"/>
         </p>
         <input type="submit" />
       </form>
